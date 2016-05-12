@@ -1,0 +1,35 @@
+<html>
+
+<body>
+
+<form action="/login" method="post">
+    <input type="text" placeholder="Enter your name" name="userName"/>
+    <button type="submit">Login</button>
+</form>
+
+
+
+{{#name}}
+Messages by {{name}}!
+{{/name}}
+
+<ol>
+    {{#messages}}
+    <li>{{.}}</li>
+    {{/messages}}
+</ol>
+
+
+
+<form action ="/add-message" method="post">
+    <input type ="text" placeholder ="Enter your message" name = "text" size="30"/>
+
+    <button type="submit"> Submit </button>
+
+    <form action ="/delete-message" method="post">
+        <button type="button" name="deleteMessage">Delete</button>
+
+
+    </form>
+
+</form>
