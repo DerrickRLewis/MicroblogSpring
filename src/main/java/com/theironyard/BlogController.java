@@ -18,8 +18,9 @@ import java.util.Collection;
 public class BlogController {
 
 
-
-    ArrayList<Message> messages = new ArrayList<>();
+@Autowired
+    BlogRepository messages;
+   // ArrayList<Message> messages = new ArrayList<>();
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home(Model model, HttpSession session){
